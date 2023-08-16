@@ -1,9 +1,15 @@
 # JavaCodeAPI
+PROGRAMMING LANGUAGE: Java on Eclipse, Maven Project
+CLASS METHODS:
+  A. JSON Interpreter
+    readAll
+    readJsonFromUrl
 
-readAll, readJsonFromUrl, 
-  
-  RetrieveArrayObject
-  
-  RetrieveStringObject, RetrieveBooleanObject, RetrieveIntegerObject
-  
-  InitializeAPIURL
+  B. JSON parsing
+    RetrieveArrayObject
+    RetrieveStringObject
+    RetrieveBooleanObject
+    RetrieveIntegerObject
+
+  C. Configuration File
+    InitializeAPIURL
