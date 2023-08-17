@@ -14,6 +14,10 @@ import org.json.JSONObject;
 
 public class StartCode {
 
+		static String ArrayName = null;
+		static String ArrayDescription = null;
+		static String varApiURL = null;
+
 		private static String readAll(Reader rd) throws IOException {
 			StringBuilder sb = new StringBuilder();
 			int cp;
@@ -58,12 +62,7 @@ public class StartCode {
 			}
 			return ArrayDescription;
 		}
-	
-		static String ArrayName = null;
-		static String ArrayDescription = null;
-		
-		static String varApiURL = null;
-		
+			
 		public static String RetrieveStringObject(String ObjectField) {
 			JSONObject json;
 			String VarObjectString = null;
@@ -128,13 +127,14 @@ public class StartCode {
 				e.printStackTrace();
 			}
 		}
-
+		
 		  
 		public static void main(String[] args) {
 			InitializeAPIURL();
-			System.out.println(RetrieveStringObject("Name"));
-			System.out.println(RetrieveBooleanObject("CanRelist"));
-			System.out.println(RetrieveIntegerObject("CategoryId"));
-			System.out.println(RetrieveArrayObject("Promotions","Feature"));
+			
+			DataValidation.VerifyPassedData(RetrieveStringObject("Name"), "Home & garden");
+			DataValidation.VerifyPassedData(RetrieveBooleanObject("CanRelist"), true);
+			DataValidation.VerifyPassedData(RetrieveIntegerObject("CategoryId"), 6329);
+			DataValidation.VerifyPassedData(RetrieveArrayObject("Promotions","Feature"), "Better position in category");
 		}
 }
