@@ -22,6 +22,6 @@ public class DataValidation {
 		}
 		else {
 			System.out.println("Verify " + comparedTo + " : failed, value retrieved: " + variableData);
-		}
+		} 
 	}
 }
